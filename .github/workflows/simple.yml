@@ -23,5 +23,5 @@ jobs:
       - name: Directory Powershell
         run: pwd
       - name: Directory Bash
-        run: ls
+        run: dir
         shell: bash
