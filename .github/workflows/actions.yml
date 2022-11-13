@@ -11,7 +11,7 @@ on:
       - v1.*
     paths:
       - "**.js"
-      - "!filename.js"
+      - "!filename.js" 
   # repository_dispatch:
   #   types: [build]
   # schedule:
