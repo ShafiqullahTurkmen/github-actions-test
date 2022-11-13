@@ -1,6 +1,8 @@
 name: Actions Workflow
 
 on: 
+  repository_dispatch:
+    types: [build]
   # schedule:
   #   - cron: "0/5 * * * *"
   #   - cron: "0/6 * * * *"       # github actions only accepts minimum 0/5 per minute
