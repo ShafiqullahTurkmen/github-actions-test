@@ -1,9 +1,9 @@
 name: Actions Workflow
 
 on: 
-  schedule:
-    - cron: "0/5 * * * *"
-    - cron: "0/6 * * * *"
+  # schedule:
+  #   - cron: "0/5 * * * *"
+  #   - cron: "0/6 * * * *"       # github actions only accepts minimum 0/5 per minute
   # push:
   pull_request:
     types: [closed, assigned, opened, reopened]
