@@ -1,8 +1,19 @@
 name: Actions Workflow
 
-on: 
-  repository_dispatch:
-    types: [build]
+on:
+  push:
+    branches:
+      - master
+      - "feature/*"   # matches feature/everything do not matches feature/everything/a
+      - "feature/**"  # matches feature/everything/everything
+      - "!feature/featC"  #ignore the feature/featC
+    tags:
+      - v1.*
+    paths:
+      - "**.js"
+      - "!filename.js"
+  # repository_dispatch:
+  #   types: [build]
   # schedule:
   #   - cron: "0/5 * * * *"
   #   - cron: "0/6 * * * *"       # github actions only accepts minimum 0/5 per minute
