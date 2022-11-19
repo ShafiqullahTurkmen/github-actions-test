@@ -8,6 +8,7 @@ jobs:
     steps: 
       - name: echo a string
         run: echo "Hello world"
+        timeout-minutes: 10
       - name: multiline script
         run: 
           node -v 
