@@ -2,6 +2,15 @@ name: Context
 on: push
 
 jobs:
+  functions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: dump
+        run:  |
+          echo ${{ contains( 'hello', 'll' )}}
+          echo ${{ startsWith( 'hello', 'he' )}}
+          echo ${{ endsWith( 'hello', 'lo' )}}
+          echo ${{ format( 'Hello {0} {1} {2}', 'World', '!', '!' )}}
   dump_contexts_to_log:
     runs-on: ubuntu-latest
     steps:
