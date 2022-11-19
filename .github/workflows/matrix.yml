@@ -7,7 +7,7 @@ jobs:
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
         node-version: [6, 7, 8]
-      # max-parallel: 2
+      max-parallel: 2
       fail-fast: true
     runs-on: ${{ matrix.os }}
     steps:
